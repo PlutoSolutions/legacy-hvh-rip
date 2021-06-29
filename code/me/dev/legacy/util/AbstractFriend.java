@@ -1,0 +1,50 @@
+/*
+ * Decompiled with CFR 0.150.
+ */
+package me.dev.legacy.util;
+
+import me.dev.legacy.util.IFriendable;
+import me.dev.legacy.util.INameable;
+
+public abstract class AbstractFriend
+implements INameable,
+IFriendable {
+    private String name;
+    private String alias;
+
+    public AbstractFriend(String name, String alias) {
+        this.name = name;
+        this.alias = alias;
+    }
+
+    @Override
+    public String getAlias() {
+        return this.alias;
+    }
+
+    @Override
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public String getDisplayName() {
+        return this.name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void setDisplayName(String displayName) {
+        this.name = this.name;
+    }
+}
+
